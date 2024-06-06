@@ -212,7 +212,7 @@
                 <version>${spring-boot.version}</version>
               	<configuration>
 			<mainClass>${start.class}</mainClass>
-			<layout>ZIP</layout>
+			<layout>JAR</layout>
 		</configuration>
                 <executions>
                     <execution>
