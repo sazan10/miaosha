@@ -8,15 +8,17 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        java: [ '17' ]
+        java: [ '11' ]
     name: Java ${{ matrix.java }} Run Compilation
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+      with:
+        ref: 280fc7dbb892025d5806ba0a8b3d568cb6b8f2d9
 
     - name: Set up JDK ${{ matrix.java }}
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
         java-version: ${{ matrix.java }}
